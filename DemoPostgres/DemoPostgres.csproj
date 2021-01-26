@@ -80,6 +80,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddApplicationSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddApplicationSet.Designer.cs">
+      <DependentUpon>AddApplicationSet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Applicant.cs" />
     <Compile Include="Application.cs" />
     <Compile Include="Employee.cs" />
@@ -107,6 +113,9 @@
     <Compile Include="Room.cs" />
     <Compile Include="TypeDocument.cs" />
     <Compile Include="TypeDormitory.cs" />
+    <EmbeddedResource Include="AddApplicationSet.resx">
+      <DependentUpon>AddApplicationSet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>

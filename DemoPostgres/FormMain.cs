@@ -496,5 +496,11 @@ namespace DemoPostgres
 
             MapperRoom(data);
         }
+
+        private void AddApplicationSetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddApplicationSet addApplicationSet = new AddApplicationSet();
+            addApplicationSet.Show();
+        }
     }
 }
