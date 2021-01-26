@@ -496,5 +496,11 @@ namespace DemoPostgres
 
             MapperRoom(data);
         }
+
+        private void AddDormitoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddDormitory form = new AddDormitory();
+            form.Show();
+        }
     }
 }
