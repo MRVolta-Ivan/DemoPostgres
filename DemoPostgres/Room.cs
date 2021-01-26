@@ -10,10 +10,8 @@ namespace DemoPostgres
     {
         DBConnection connection = DBConnection.instance;
 
-        public List<Room> GetAll()
+        private List<Room> Mapper(List<List<string>> data)
         {
-            List<List<string>> data = connection.ExecuteSQL("select * from getlistroom()");
-
             List<Room> result = new List<Room>();
 
             foreach (List<string> i in data)
@@ -27,6 +25,27 @@ namespace DemoPostgres
             }
 
             return result;
+        }
+
+        public List<Room> GetAll()
+        {
+            List<List<string>> data = connection.ExecuteSQL("select * from getlistroom()");
+
+            return Mapper(data);
+        }
+
+        public List<Room> GetFreeRoomDormitory(long index)
+        {
+            List<List<string>> data = connection.ExecuteSQL("select * from getlistfreeroomdormitory(" + index + ")");
+
+            return Mapper(data);
+        }
+
+        public List<Room> GetRoomDormitory(long index)
+        {
+            List<List<string>> data = connection.ExecuteSQL("select * from getlistroomofdormitory(" + index + ")");
+
+            return Mapper(data);
         }
     }
 
