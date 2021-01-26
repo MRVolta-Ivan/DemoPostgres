@@ -19,7 +19,7 @@ namespace DemoPostgres
 
         public void Init(string login, string password)
         {
-            var cs = "Host=localhost;" +
+            var cs = "Host=25.83.26.128;" +
                    "Username=" + login + ";" +
                    "Password=" + password + ";" +
                    "Database=postgres";
