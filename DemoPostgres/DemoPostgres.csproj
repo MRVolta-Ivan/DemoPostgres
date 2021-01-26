@@ -86,6 +86,12 @@
     <Compile Include="AddDormitory.Designer.cs">
       <DependentUpon>AddDormitory.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOrder.Designer.cs">
+      <DependentUpon>AddOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Applicant.cs" />
     <Compile Include="Application.cs" />
     <Compile Include="Employee.cs" />
@@ -115,6 +121,9 @@
     <Compile Include="TypeDormitory.cs" />
     <EmbeddedResource Include="AddDormitory.resx">
       <DependentUpon>AddDormitory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOrder.resx">
+      <DependentUpon>AddOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

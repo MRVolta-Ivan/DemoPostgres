@@ -30,7 +30,7 @@ namespace DemoPostgres
         ReportRepository report = new ReportRepository();
 
         TypeDormitoryRepository typeDormitory = new TypeDormitoryRepository();
-        TypeDocumnetRepository typeDocument = new TypeDocumnetRepository();
+        TypeDocumentRepository typeDocument = new TypeDocumentRepository();
 
         public FormMain(Form _loginForm)
         {
@@ -500,6 +500,12 @@ namespace DemoPostgres
         private void AddDormitoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddDormitory form = new AddDormitory();
+            form.Show();
+        }
+
+        private void AddOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddOrder form = new AddOrder();
             form.Show();
         }
     }

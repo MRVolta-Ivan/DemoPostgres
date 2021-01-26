@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DemoPostgres
 {
-    class TypeDocumnetRepository
+    class TypeDocumentRepository
     {
         DBConnection connection = DBConnection.instance;
 
