@@ -12,6 +12,11 @@ namespace DemoPostgres
 {
     public partial class AddApplicationSet : Form
     {
+        List<Employee> employees = new List<Employee>();
+        EmployeeRepository employeeRepository = new EmployeeRepository();
+        ApplicantRepository applicantRepository = new ApplicantRepository();
+        ApplicationRepository applicationRepository = new ApplicationRepository();
+
         public AddApplicationSet()
         {
             InitializeComponent();
@@ -19,12 +24,42 @@ namespace DemoPostgres
 
         private void AddApplicationSet_Load(object sender, EventArgs e)
         {
+            employees = employeeRepository.GetAll();
 
+            foreach (var employee in employees)
+            {
+                comboBoxEmployee.Items.Add(employee.fio);
+            }
+            //comboBoxEmployee.Items.AddRange(employees);
         }
 
         private void buttonConfirm_Click(object sender, EventArgs e)
         {
+            //string FIO;
+            //try
+            //{
+            //    FIO = Convert.ToString(labelFIO.Text);
+            //}
+            //catch (Exception ex)
+            //{
+            //    string message = "Неправильно введение ФИО!";
+            //    string caption = "Ошибка!";
+            //    MessageBoxButtons buttons = MessageBoxButtons.OK;
+            //    DialogResult result;
 
+            //    result = MessageBox.Show(message, caption, buttons);
+            //}
+
+            long idApplicant = applicantRepository.AddApplicant(textBoxFIO.Text, maskedTextBoxNumberPhone.Text, textBoxAdress.Text);
+
+            int idEmployee = comboBoxEmployee.SelectedIndex;
+            long idApplicantion = applicationRepository.AddApplication(textBoxNumberApplication.Text, dateTimePickerDateApplication.Text, 1, employees[idEmployee].id, idApplicant);
+            Close();
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

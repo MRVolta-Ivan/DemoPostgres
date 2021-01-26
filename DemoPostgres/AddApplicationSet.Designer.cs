@@ -33,17 +33,18 @@ namespace DemoPostgres
             this.labelNumberPhone = new System.Windows.Forms.Label();
             this.labelAdress = new System.Windows.Forms.Label();
             this.textBoxFIO = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.maskedTextBoxNumberPhone = new System.Windows.Forms.MaskedTextBox();
+            this.textBoxAdress = new System.Windows.Forms.TextBox();
             this.buttonConfirm = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxNumberApplication = new System.Windows.Forms.TextBox();
             this.labelNumberApplication = new System.Windows.Forms.Label();
             this.labelDateApplication = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.labelEmployee = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxEmployee = new System.Windows.Forms.ComboBox();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.dateTimePickerDateApplication = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // labelFIO
@@ -80,20 +81,20 @@ namespace DemoPostgres
             this.textBoxFIO.Size = new System.Drawing.Size(250, 20);
             this.textBoxFIO.TabIndex = 3;
             // 
-            // maskedTextBox1
+            // maskedTextBoxNumberPhone
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(15, 115);
-            this.maskedTextBox1.Mask = "(999) 000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(93, 20);
-            this.maskedTextBox1.TabIndex = 4;
+            this.maskedTextBoxNumberPhone.Location = new System.Drawing.Point(15, 115);
+            this.maskedTextBoxNumberPhone.Mask = "(999) 000-0000";
+            this.maskedTextBoxNumberPhone.Name = "maskedTextBoxNumberPhone";
+            this.maskedTextBoxNumberPhone.Size = new System.Drawing.Size(93, 20);
+            this.maskedTextBoxNumberPhone.TabIndex = 4;
             // 
-            // textBox1
+            // textBoxAdress
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 175);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 20);
-            this.textBox1.TabIndex = 5;
+            this.textBoxAdress.Location = new System.Drawing.Point(15, 175);
+            this.textBoxAdress.Name = "textBoxAdress";
+            this.textBoxAdress.Size = new System.Drawing.Size(250, 20);
+            this.textBoxAdress.TabIndex = 5;
             // 
             // buttonConfirm
             // 
@@ -123,12 +124,12 @@ namespace DemoPostgres
             this.label2.TabIndex = 8;
             this.label2.Text = "Информация о заявлении";
             // 
-            // textBox2
+            // textBoxNumberApplication
             // 
-            this.textBox2.Location = new System.Drawing.Point(353, 55);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 20);
-            this.textBox2.TabIndex = 9;
+            this.textBoxNumberApplication.Location = new System.Drawing.Point(353, 55);
+            this.textBoxNumberApplication.Name = "textBoxNumberApplication";
+            this.textBoxNumberApplication.Size = new System.Drawing.Size(200, 20);
+            this.textBoxNumberApplication.TabIndex = 9;
             // 
             // labelNumberApplication
             // 
@@ -148,15 +149,6 @@ namespace DemoPostgres
             this.labelDateApplication.TabIndex = 11;
             this.labelDateApplication.Text = "Дата заявления";
             // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(353, 115);
-            this.maskedTextBox2.Mask = "00/00/0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox2.TabIndex = 12;
-            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
-            // 
             // labelEmployee
             // 
             this.labelEmployee.AutoSize = true;
@@ -166,31 +158,50 @@ namespace DemoPostgres
             this.labelEmployee.TabIndex = 13;
             this.labelEmployee.Text = "Сотрудник";
             // 
-            // comboBox1
+            // comboBoxEmployee
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(353, 174);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 21);
-            this.comboBox1.TabIndex = 14;
+            this.comboBoxEmployee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEmployee.FormattingEnabled = true;
+            this.comboBoxEmployee.Location = new System.Drawing.Point(353, 174);
+            this.comboBoxEmployee.Name = "comboBoxEmployee";
+            this.comboBoxEmployee.Size = new System.Drawing.Size(200, 21);
+            this.comboBoxEmployee.TabIndex = 14;
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Location = new System.Drawing.Point(497, 426);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.TabIndex = 15;
+            this.buttonCancel.Text = "Отмена";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
+            // dateTimePickerDateApplication
+            // 
+            this.dateTimePickerDateApplication.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerDateApplication.Location = new System.Drawing.Point(353, 116);
+            this.dateTimePickerDateApplication.Name = "dateTimePickerDateApplication";
+            this.dateTimePickerDateApplication.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerDateApplication.TabIndex = 16;
             // 
             // AddApplicationSet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 461);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(584, 461);
+            this.Controls.Add(this.dateTimePickerDateApplication);
+            this.Controls.Add(this.buttonCancel);
+            this.Controls.Add(this.comboBoxEmployee);
             this.Controls.Add(this.labelEmployee);
-            this.Controls.Add(this.maskedTextBox2);
             this.Controls.Add(this.labelDateApplication);
             this.Controls.Add(this.labelNumberApplication);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxNumberApplication);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonConfirm);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.textBoxAdress);
+            this.Controls.Add(this.maskedTextBoxNumberPhone);
             this.Controls.Add(this.textBoxFIO);
             this.Controls.Add(this.labelAdress);
             this.Controls.Add(this.labelNumberPhone);
@@ -209,16 +220,17 @@ namespace DemoPostgres
         private System.Windows.Forms.Label labelNumberPhone;
         private System.Windows.Forms.Label labelAdress;
         private System.Windows.Forms.TextBox textBoxFIO;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxNumberPhone;
+        private System.Windows.Forms.TextBox textBoxAdress;
         private System.Windows.Forms.Button buttonConfirm;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxNumberApplication;
         private System.Windows.Forms.Label labelNumberApplication;
         private System.Windows.Forms.Label labelDateApplication;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.Label labelEmployee;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxEmployee;
+        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDateApplication;
     }
 }

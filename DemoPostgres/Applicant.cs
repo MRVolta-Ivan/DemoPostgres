@@ -49,6 +49,20 @@ namespace DemoPostgres
 
             return Mapper(data);
         }
+
+        public long AddApplicant(string fio, string numberPhone, string adress)
+        {
+            connection.ExecuteSQL("call addapplicant('" + fio + "', '" + numberPhone + "', '" + adress + "')");
+
+            List<Applicant> data = GetListApplicant();
+
+            long index = data[0].id;
+            for (int i = 1; i < data.Count; i++)
+                if (index < data[i].id)
+                    index = data[i].id;
+
+            return index;
+        }
     }
 
     class Applicant
