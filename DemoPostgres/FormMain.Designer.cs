@@ -224,6 +224,7 @@
             this.AddDormitoryToolStripMenuItem.Name = "AddDormitoryToolStripMenuItem";
             this.AddDormitoryToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
             this.AddDormitoryToolStripMenuItem.Text = "Добавить общежитие";
+            this.AddDormitoryToolStripMenuItem.Click += new System.EventHandler(this.AddDormitoryToolStripMenuItem_Click);
             // 
             // AddOrderToolStripMenuItem
             // 

@@ -501,6 +501,12 @@ namespace DemoPostgres
         {
             AddApplicationSet addApplicationSet = new AddApplicationSet();
             addApplicationSet.Show();
+
+        private void AddDormitoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddDormitory form = new AddDormitory();
+            form.Show();
+
         }
     }
 }

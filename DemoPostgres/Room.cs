@@ -47,6 +47,19 @@ namespace DemoPostgres
 
             return Mapper(data);
         }
+
+        public long AddRoom(string number, double cost, long idDormitory)
+        {
+            connection.ExecuteSQL("call addroom('" + number + "', " + cost.ToString().Replace(',', '.') + ", " + idDormitory + ")");
+            List<Room> data = GetAll();
+
+            long index = data[0].id;
+            for (int i = 1; i < data.Count; i++)
+                if (index < data[i].id)
+                    index = data[i].id;
+
+            return index;
+        }
     }
 
     class Room
