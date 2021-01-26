@@ -424,5 +424,15 @@ namespace DemoPostgres
                 dataGrid.Rows.Add(i.number, i.date, i.fire, i.system, i.condition, inspD[i.inspector], dormD[i.dormitory]);
             }
         }
+
+        private void AddApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddDormitoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

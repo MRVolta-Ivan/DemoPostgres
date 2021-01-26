@@ -12,9 +12,7 @@ using Npgsql;
 namespace DemoPostgres
 {
     public partial class FormLogin : Form
-    {
-       
-
+    {  
         public FormLogin()
         {
             InitializeComponent();
@@ -22,11 +20,10 @@ namespace DemoPostgres
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             try
             {
-
-                DBConnection.instance.Init(LoginBox.Text, PasswordBox.Text);
+                //DBConnection.instance.Init(LoginBox.Text, PasswordBox.Text);                
+                DBConnection.instance.Init("Raf", "123");                
 
                 FormMain main = new FormMain(this);
                 main.Show();
