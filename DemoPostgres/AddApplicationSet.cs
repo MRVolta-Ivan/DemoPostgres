@@ -35,21 +35,6 @@ namespace DemoPostgres
 
         private void buttonConfirm_Click(object sender, EventArgs e)
         {
-            //string FIO;
-            //try
-            //{
-            //    FIO = Convert.ToString(labelFIO.Text);
-            //}
-            //catch (Exception ex)
-            //{
-            //    string message = "Неправильно введение ФИО!";
-            //    string caption = "Ошибка!";
-            //    MessageBoxButtons buttons = MessageBoxButtons.OK;
-            //    DialogResult result;
-
-            //    result = MessageBox.Show(message, caption, buttons);
-            //}
-
             long idApplicant = applicantRepository.AddApplicant(textBoxFIO.Text, maskedTextBoxNumberPhone.Text, textBoxAdress.Text);
 
             int idEmployee = comboBoxEmployee.SelectedIndex;
