@@ -46,20 +46,20 @@
             this.OrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ReceiptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGrid = new System.Windows.Forms.DataGridView();
-            this.contextMenuGridData = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.добавитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.изменитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.показатьКомнатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.AddApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddDormitoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddReceiptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGrid = new System.Windows.Forms.DataGridView();
+            this.contextDormitoryMenuGridData = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.RoomDormitoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ShowAllRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ShowFreeRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
-            this.contextMenuGridData.SuspendLayout();
+            this.contextDormitoryMenuGridData.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu
@@ -200,48 +200,6 @@
             this.reportToolStripMenuItem.Text = "Отчёты о проверке";
             this.reportToolStripMenuItem.Click += new System.EventHandler(this.reportToolStripMenuItem_Click);
             // 
-            // dataGrid
-            // 
-            this.dataGrid.AllowUserToAddRows = false;
-            this.dataGrid.AllowUserToDeleteRows = false;
-            this.dataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGrid.Location = new System.Drawing.Point(0, 24);
-            this.dataGrid.MultiSelect = false;
-            this.dataGrid.Name = "dataGrid";
-            this.dataGrid.ReadOnly = true;
-            this.dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid.Size = new System.Drawing.Size(984, 537);
-            this.dataGrid.TabIndex = 1;
-            // 
-            // contextMenuGridData
-            // 
-            this.contextMenuGridData.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.добавитьToolStripMenuItem,
-            this.изменитьToolStripMenuItem,
-            this.показатьКомнатыToolStripMenuItem});
-            this.contextMenuGridData.Name = "contextMenuGridData";
-            this.contextMenuGridData.Size = new System.Drawing.Size(177, 70);
-            // 
-            // добавитьToolStripMenuItem
-            // 
-            this.добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
-            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.добавитьToolStripMenuItem.Text = "Добавить";
-            // 
-            // изменитьToolStripMenuItem
-            // 
-            this.изменитьToolStripMenuItem.Name = "изменитьToolStripMenuItem";
-            this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.изменитьToolStripMenuItem.Text = "Изменить";
-            // 
-            // показатьКомнатыToolStripMenuItem
-            // 
-            this.показатьКомнатыToolStripMenuItem.Name = "показатьКомнатыToolStripMenuItem";
-            this.показатьКомнатыToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.показатьКомнатыToolStripMenuItem.Text = "Показать комнаты";
-            // 
             // AddToolStripMenuItem1
             // 
             this.AddToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -284,6 +242,51 @@
             this.AddReportToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.AddReportToolStripMenuItem.Text = "Добавить отчёт о проверке";
             // 
+            // dataGrid
+            // 
+            this.dataGrid.AllowUserToAddRows = false;
+            this.dataGrid.AllowUserToDeleteRows = false;
+            this.dataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGrid.Location = new System.Drawing.Point(0, 24);
+            this.dataGrid.MultiSelect = false;
+            this.dataGrid.Name = "dataGrid";
+            this.dataGrid.ReadOnly = true;
+            this.dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGrid.Size = new System.Drawing.Size(984, 537);
+            this.dataGrid.TabIndex = 1;
+            // 
+            // contextDormitoryMenuGridData
+            // 
+            this.contextDormitoryMenuGridData.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RoomDormitoryToolStripMenuItem});
+            this.contextDormitoryMenuGridData.Name = "contextMenuGridData";
+            this.contextDormitoryMenuGridData.Size = new System.Drawing.Size(181, 48);
+            // 
+            // RoomDormitoryToolStripMenuItem
+            // 
+            this.RoomDormitoryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ShowAllRoomToolStripMenuItem,
+            this.ShowFreeRoomToolStripMenuItem});
+            this.RoomDormitoryToolStripMenuItem.Name = "RoomDormitoryToolStripMenuItem";
+            this.RoomDormitoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.RoomDormitoryToolStripMenuItem.Text = "Обжещития";
+            // 
+            // ShowAllRoomToolStripMenuItem
+            // 
+            this.ShowAllRoomToolStripMenuItem.Name = "ShowAllRoomToolStripMenuItem";
+            this.ShowAllRoomToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.ShowAllRoomToolStripMenuItem.Text = "Показать все комнаты";
+            this.ShowAllRoomToolStripMenuItem.Click += new System.EventHandler(this.ShowAllRoomToolStripMenuItem_Click);
+            // 
+            // ShowFreeRoomToolStripMenuItem
+            // 
+            this.ShowFreeRoomToolStripMenuItem.Name = "ShowFreeRoomToolStripMenuItem";
+            this.ShowFreeRoomToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.ShowFreeRoomToolStripMenuItem.Text = "Показать свободные комнаты";
+            this.ShowFreeRoomToolStripMenuItem.Click += new System.EventHandler(this.ShowFreeRoomToolStripMenuItem_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,7 +303,7 @@
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
-            this.contextMenuGridData.ResumeLayout(false);
+            this.contextDormitoryMenuGridData.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,15 +329,15 @@
         private System.Windows.Forms.ToolStripMenuItem ReceiptToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGrid;
         private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
-        private System.Windows.Forms.ContextMenuStrip contextMenuGridData;
-        private System.Windows.Forms.ToolStripMenuItem добавитьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem изменитьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem показатьКомнатыToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextDormitoryMenuGridData;
+        private System.Windows.Forms.ToolStripMenuItem RoomDormitoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem AddApplicationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddDormitoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddOrderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddReceiptToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ShowAllRoomToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ShowFreeRoomToolStripMenuItem;
     }
 }
