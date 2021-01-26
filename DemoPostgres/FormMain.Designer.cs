@@ -57,6 +57,7 @@
             this.RoomDormitoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ShowAllRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ShowFreeRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddPermissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.contextDormitoryMenuGridData.SuspendLayout();
@@ -206,6 +207,7 @@
             this.AddApplicationSetToolStripMenuItem,
             this.AddDormitoryToolStripMenuItem,
             this.AddOrderToolStripMenuItem,
+            this.AddPermissionToolStripMenuItem,
             this.AddReceiptToolStripMenuItem,
             this.AddReportToolStripMenuItem});
             this.AddToolStripMenuItem1.Name = "AddToolStripMenuItem1";
@@ -231,6 +233,7 @@
             this.AddOrderToolStripMenuItem.Name = "AddOrderToolStripMenuItem";
             this.AddOrderToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
             this.AddOrderToolStripMenuItem.Text = "Добавить приказ";
+            this.AddOrderToolStripMenuItem.Click += new System.EventHandler(this.AddOrderToolStripMenuItem_Click);
             // 
             // AddReceiptToolStripMenuItem
             // 
@@ -289,6 +292,12 @@
             this.ShowFreeRoomToolStripMenuItem.Text = "Показать свободные комнаты";
             this.ShowFreeRoomToolStripMenuItem.Click += new System.EventHandler(this.ShowFreeRoomToolStripMenuItem_Click);
             // 
+            // AddPermissionToolStripMenuItem
+            // 
+            this.AddPermissionToolStripMenuItem.Name = "AddPermissionToolStripMenuItem";
+            this.AddPermissionToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.AddPermissionToolStripMenuItem.Text = "Добавить разрешение";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -341,5 +350,6 @@
         private System.Windows.Forms.ToolStripMenuItem AddReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ShowAllRoomToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ShowFreeRoomToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AddPermissionToolStripMenuItem;
     }
 }

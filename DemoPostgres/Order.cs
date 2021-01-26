@@ -10,10 +10,8 @@ namespace DemoPostgres
     {
         DBConnection connection = DBConnection.instance;
 
-        public List<Order> GetAll()
+        private List<Order> Mapper(List<List<string>> data)
         {
-            List<List<string>> data = connection.ExecuteSQL("select * from getlistorder()");
-
             List<Order> result = new List<Order>();
 
             foreach (List<string> i in data)
@@ -31,6 +29,34 @@ namespace DemoPostgres
             }
 
             return result;
+        }
+
+        public List<Order> GetAll()
+        {
+            List<List<string>> data = connection.ExecuteSQL("select * from getlistorder()");
+
+            return Mapper(data);
+        }
+
+        public List<Order> GetLastOrder(long applicantid)
+        {
+            List<List<string>> data = connection.ExecuteSQL("select * from getlistlastapplicantorder(" + applicantid + ")");
+
+            return Mapper(data);
+        }
+
+        public long Add(string number, string date, long idTypeDocument, long idEmployee, long idRoom, long idDormitory, long idApplicant)
+        {
+            connection.ExecuteSQL("call addorder('"+number+"','"+date+"', "+idTypeDocument+", "+idEmployee+","+idRoom+","+idDormitory+","+idApplicant+")");
+
+            List<Order> data = GetAll();
+
+            long index = data[0].id;
+            for (int i = 1; i < data.Count; i++)
+                if (index < data[i].id)
+                    index = data[i].id;
+
+            return index;
         }
     }
 

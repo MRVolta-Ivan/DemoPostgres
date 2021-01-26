@@ -43,6 +43,13 @@ namespace DemoPostgres
             return Mapper(data);
         }
 
+        public List<Applicant> GetListNoTenant()
+        {
+            List<List<string>> data = connection.ExecuteSQL("select * from getlistapplicantnotenant()");
+
+            return Mapper(data);
+        }
+
         public List<Applicant> GetListPayment()
         {
             List<List<string>> data = connection.ExecuteSQL("select * from getlistapplicantpayment()");
