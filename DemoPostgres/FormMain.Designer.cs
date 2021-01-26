@@ -47,7 +47,7 @@
             this.ReceiptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.AddApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddApplicationSetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddDormitoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddReceiptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -87,7 +87,7 @@
             // ExitToolStripMenuItem
             // 
             this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
-            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.ExitToolStripMenuItem.Text = "Выход";
             this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -203,7 +203,7 @@
             // AddToolStripMenuItem1
             // 
             this.AddToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AddApplicationToolStripMenuItem,
+            this.AddApplicationSetToolStripMenuItem,
             this.AddDormitoryToolStripMenuItem,
             this.AddOrderToolStripMenuItem,
             this.AddReceiptToolStripMenuItem,
@@ -212,35 +212,36 @@
             this.AddToolStripMenuItem1.Size = new System.Drawing.Size(71, 20);
             this.AddToolStripMenuItem1.Text = "Добавить";
             // 
-            // AddApplicationToolStripMenuItem
+            // AddApplicationSetToolStripMenuItem
             // 
-            this.AddApplicationToolStripMenuItem.Name = "AddApplicationToolStripMenuItem";
-            this.AddApplicationToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
-            this.AddApplicationToolStripMenuItem.Text = "Добавить заявление";
+            this.AddApplicationSetToolStripMenuItem.Name = "AddApplicationSetToolStripMenuItem";
+            this.AddApplicationSetToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.AddApplicationSetToolStripMenuItem.Text = "Добавить заявление на заселение";
+            this.AddApplicationSetToolStripMenuItem.Click += new System.EventHandler(this.AddApplicationSetToolStripMenuItem_Click);
             // 
             // AddDormitoryToolStripMenuItem
             // 
             this.AddDormitoryToolStripMenuItem.Name = "AddDormitoryToolStripMenuItem";
-            this.AddDormitoryToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.AddDormitoryToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
             this.AddDormitoryToolStripMenuItem.Text = "Добавить общежитие";
             this.AddDormitoryToolStripMenuItem.Click += new System.EventHandler(this.AddDormitoryToolStripMenuItem_Click);
             // 
             // AddOrderToolStripMenuItem
             // 
             this.AddOrderToolStripMenuItem.Name = "AddOrderToolStripMenuItem";
-            this.AddOrderToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.AddOrderToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
             this.AddOrderToolStripMenuItem.Text = "Добавить приказ";
             // 
             // AddReceiptToolStripMenuItem
             // 
             this.AddReceiptToolStripMenuItem.Name = "AddReceiptToolStripMenuItem";
-            this.AddReceiptToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.AddReceiptToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
             this.AddReceiptToolStripMenuItem.Text = "Добавить квитанцию";
             // 
             // AddReportToolStripMenuItem
             // 
             this.AddReportToolStripMenuItem.Name = "AddReportToolStripMenuItem";
-            this.AddReportToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.AddReportToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
             this.AddReportToolStripMenuItem.Text = "Добавить отчёт о проверке";
             // 
             // dataGrid
@@ -271,7 +272,7 @@
             this.ShowAllRoomToolStripMenuItem,
             this.ShowFreeRoomToolStripMenuItem});
             this.RoomDormitoryToolStripMenuItem.Name = "RoomDormitoryToolStripMenuItem";
-            this.RoomDormitoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.RoomDormitoryToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.RoomDormitoryToolStripMenuItem.Text = "Обжещития";
             // 
             // ShowAllRoomToolStripMenuItem
@@ -333,7 +334,7 @@
         private System.Windows.Forms.ContextMenuStrip contextDormitoryMenuGridData;
         private System.Windows.Forms.ToolStripMenuItem RoomDormitoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem AddApplicationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AddApplicationSetToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddDormitoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddOrderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddReceiptToolStripMenuItem;

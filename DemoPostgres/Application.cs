@@ -30,6 +30,20 @@ namespace DemoPostgres
 
             return result;
         }
+
+        public long AddApplication(string numberApplication, string date, long typeDoc, long employee, long applicant)
+        {
+            connection.ExecuteSQL("call addapplication('" + numberApplication + "', '" + date + "', " + typeDoc + ", " + employee + ", " + applicant + ")");
+
+            List<ApplicationDoc> data = GetAll();
+
+            long index = data[0].id;
+            for (int i = 1; i < data.Count; i++)
+                if (index < data[i].id)
+                    index = data[i].id;
+
+            return index;
+        }
     }
 
     class ApplicationDoc
