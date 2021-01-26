@@ -48,6 +48,19 @@ namespace DemoPostgres
 
             return Mapper(data);
         }
+
+        public long AddDormitory(string adress, long countRoom, string condition, long idTypeDormitory)
+        {
+            connection.ExecuteSQL("call adddormitory('"+ adress + "', " + countRoom + ", '" + condition + "', " + idTypeDormitory + ")");
+            List<Dormitory> data = GetListDormitory();
+
+            long index = data[0].id;
+            for (int i = 1; i < data.Count; i++)
+                if (index < data[i].id)
+                    index = data[i].id;
+
+            return index;
+        }
     }
 
 

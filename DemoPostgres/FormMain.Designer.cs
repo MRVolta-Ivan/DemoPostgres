@@ -223,6 +223,7 @@
             this.AddDormitoryToolStripMenuItem.Name = "AddDormitoryToolStripMenuItem";
             this.AddDormitoryToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.AddDormitoryToolStripMenuItem.Text = "Добавить общежитие";
+            this.AddDormitoryToolStripMenuItem.Click += new System.EventHandler(this.AddDormitoryToolStripMenuItem_Click);
             // 
             // AddOrderToolStripMenuItem
             // 
@@ -262,7 +263,7 @@
             this.contextDormitoryMenuGridData.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.RoomDormitoryToolStripMenuItem});
             this.contextDormitoryMenuGridData.Name = "contextMenuGridData";
-            this.contextDormitoryMenuGridData.Size = new System.Drawing.Size(181, 48);
+            this.contextDormitoryMenuGridData.Size = new System.Drawing.Size(142, 26);
             // 
             // RoomDormitoryToolStripMenuItem
             // 
