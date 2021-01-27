@@ -521,5 +521,11 @@ namespace DemoPostgres
             AddPermission form = new AddPermission();
             form.Show();
         }
+
+        private void AddReceiptToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddReceipt form = new AddReceipt();
+            form.Show();
+        }
     }
 }

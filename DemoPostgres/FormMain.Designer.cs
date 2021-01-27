@@ -247,6 +247,7 @@
             this.AddReceiptToolStripMenuItem.Name = "AddReceiptToolStripMenuItem";
             this.AddReceiptToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
             this.AddReceiptToolStripMenuItem.Text = "Добавить квитанцию";
+            this.AddReceiptToolStripMenuItem.Click += new System.EventHandler(this.AddReceiptToolStripMenuItem_Click);
             // 
             // AddReportToolStripMenuItem
             // 
