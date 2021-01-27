@@ -533,5 +533,22 @@ namespace DemoPostgres
             AddReport form = new AddReport();
             form.Show();
         }
+
+        private void ChangeDormitoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Dormitory dorm = null;
+
+            List<Dormitory> listDorm = dormitory.GetListDormitory();
+
+            foreach (Dormitory i in  listDorm)
+                if (i.id == Convert.ToInt64(dataGrid.SelectedCells[0].Value))
+                {
+                    dorm = i;
+                    break;
+                }
+
+            ChangeDormitory form = new ChangeDormitory(dorm);
+            form.Show();
+        }
     }
 }

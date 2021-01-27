@@ -118,6 +118,12 @@
     </Compile>
     <Compile Include="Applicant.cs" />
     <Compile Include="Application.cs" />
+    <Compile Include="ChangeDormitory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeDormitory.Designer.cs">
+      <DependentUpon>ChangeDormitory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="Dormitory.cs" />
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddReport.resx">
       <DependentUpon>AddReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeDormitory.resx">
+      <DependentUpon>ChangeDormitory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

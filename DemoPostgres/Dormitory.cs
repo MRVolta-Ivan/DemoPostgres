@@ -61,10 +61,15 @@ namespace DemoPostgres
 
             return index;
         }
+
+        public void Change(string adress, long countRoom, string condition, long iddormitory)
+        {
+            connection.ExecuteSQL("call changedormitory('"+adress+"', "+countRoom+", '"+condition+"', "+iddormitory+")");
+        }
     }
 
 
-    class Dormitory
+    public class Dormitory
     {
         public long id;
         public string adress;
