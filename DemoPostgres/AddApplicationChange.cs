@@ -59,16 +59,15 @@ namespace DemoPostgres
             }
         }
 
-
         private void buttonConfirm_Click(object sender, EventArgs e)
         {
-            //long idApplicant = applicantRepository.AddApplicant(textBoxFIO.Text, maskedTextBoxNumberPhone.Text, textBoxAdress.Text);
+            int idEmployee = comboBoxEmployee.SelectedIndex;
 
-            //int idEmployee = comboBoxEmployee.SelectedIndex;
-            //long idApplicantion = applicationRepository.AddApplication(textBoxNumberApplication.Text, dateTimePickerDateApplication.Text, 1, employees[idEmployee].id, idApplicant);
+            int idTypeDoc = comboBoxTypeDocument.SelectedIndex;
 
+            int idApplicant = comboBoxApplicant.SelectedIndex;
 
-
+            long idApplicantion = applicationRepository.AddApplication(textBoxNumber.Text, dateTimePickerDate.Text, typeDocuments[idTypeDoc + 1].id, employees[idEmployee].id, applicant[idApplicant].id);
 
             Close();
         }

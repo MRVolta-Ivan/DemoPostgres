@@ -78,7 +78,7 @@ namespace DemoPostgres
 
             foreach (Applicant i in data)
             {
-                dataGrid.Rows.Add(i.id, i.fio, i.nuberTelephone, i.adress);
+                dataGrid.Rows.Add(i.id, i.fio, i.numberTelephone, i.adress);
             }
         }
 

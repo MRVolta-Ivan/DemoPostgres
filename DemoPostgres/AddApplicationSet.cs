@@ -30,7 +30,6 @@ namespace DemoPostgres
             {
                 comboBoxEmployee.Items.Add(employee.fio);
             }
-            //comboBoxEmployee.Items.AddRange(employees);
         }
 
         private void buttonConfirm_Click(object sender, EventArgs e)

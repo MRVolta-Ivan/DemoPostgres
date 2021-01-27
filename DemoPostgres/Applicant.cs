@@ -74,14 +74,14 @@ namespace DemoPostgres
     {
         public long id;
         public string fio;
-        public string nuberTelephone;
+        public string numberTelephone;
         public string adress;
 
         public Applicant(long id, string fio, string nuberTelephone, string adress)
         {
             this.id = id;
             this.fio = fio;
-            this.nuberTelephone = nuberTelephone;
+            this.numberTelephone = nuberTelephone;
             this.adress = adress;
         }
     }

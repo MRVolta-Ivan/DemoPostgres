@@ -36,8 +36,8 @@ namespace DemoPostgres
             this.labelApplicant = new System.Windows.Forms.Label();
             this.buttonConfirm = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dateTimePickerDate = new System.Windows.Forms.DateTimePicker();
+            this.textBoxNumber = new System.Windows.Forms.TextBox();
             this.comboBoxTypeDocument = new System.Windows.Forms.ComboBox();
             this.comboBoxEmployee = new System.Windows.Forms.ComboBox();
             this.comboBoxApplicant = new System.Windows.Forms.ComboBox();
@@ -108,20 +108,20 @@ namespace DemoPostgres
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
-            // dateTimePicker1
+            // dateTimePickerDate
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(15, 77);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 7;
+            this.dateTimePickerDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerDate.Location = new System.Drawing.Point(15, 77);
+            this.dateTimePickerDate.Name = "dateTimePickerDate";
+            this.dateTimePickerDate.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerDate.TabIndex = 7;
             // 
-            // textBox1
+            // textBoxNumber
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(457, 20);
-            this.textBox1.TabIndex = 8;
+            this.textBoxNumber.Location = new System.Drawing.Point(15, 27);
+            this.textBoxNumber.Name = "textBoxNumber";
+            this.textBoxNumber.Size = new System.Drawing.Size(457, 20);
+            this.textBoxNumber.TabIndex = 8;
             // 
             // comboBoxTypeDocument
             // 
@@ -158,8 +158,8 @@ namespace DemoPostgres
             this.Controls.Add(this.comboBoxApplicant);
             this.Controls.Add(this.comboBoxEmployee);
             this.Controls.Add(this.comboBoxTypeDocument);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.textBoxNumber);
+            this.Controls.Add(this.dateTimePickerDate);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonConfirm);
             this.Controls.Add(this.labelApplicant);
@@ -184,8 +184,8 @@ namespace DemoPostgres
         private System.Windows.Forms.Label labelApplicant;
         private System.Windows.Forms.Button buttonConfirm;
         private System.Windows.Forms.Button buttonCancel;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDate;
+        private System.Windows.Forms.TextBox textBoxNumber;
         private System.Windows.Forms.ComboBox comboBoxTypeDocument;
         private System.Windows.Forms.ComboBox comboBoxEmployee;
         private System.Windows.Forms.ComboBox comboBoxApplicant;
