@@ -32,6 +32,20 @@ namespace DemoPostgres
 
             return result;
         }
+
+        public long Add(string number, string date, double summ, long idemployee, long idroom, long iddormitory, long idapplicant)
+        {
+            connection.ExecuteSQL("call addreceipt('"+number+"', '"+date+"', "+summ.ToString().Replace(',','.')+", "+idemployee+", "+idroom+", "+iddormitory+", "+idapplicant+")");
+
+            List<Receipt> data = GetAll();
+
+            long index = data[0].id;
+            for (int i = 1; i < data.Count; i++)
+                if (index < data[i].id)
+                    index = data[i].id;
+
+            return index;
+        }
     }
 
     class Receipt

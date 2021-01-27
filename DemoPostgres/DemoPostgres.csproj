@@ -80,12 +80,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+
     <Compile Include="AddApplicationChange.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddApplicationChange.Designer.cs">
       <DependentUpon>AddApplicationChange.cs</DependentUpon>
     </Compile>
+
     <Compile Include="AddApplicationSet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +105,24 @@
     </Compile>
     <Compile Include="AddOrder.Designer.cs">
       <DependentUpon>AddOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPermission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPermission.Designer.cs">
+      <DependentUpon>AddPermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddReceipt.Designer.cs">
+      <DependentUpon>AddReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddReport.Designer.cs">
+      <DependentUpon>AddReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Applicant.cs" />
     <Compile Include="Application.cs" />
@@ -131,9 +151,11 @@
     <Compile Include="Room.cs" />
     <Compile Include="TypeDocument.cs" />
     <Compile Include="TypeDormitory.cs" />
+
     <EmbeddedResource Include="AddApplicationChange.resx">
       <DependentUpon>AddApplicationChange.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="AddApplicationSet.resx">
       <DependentUpon>AddApplicationSet.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +164,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddOrder.resx">
       <DependentUpon>AddOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPermission.resx">
+      <DependentUpon>AddPermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddReceipt.resx">
+      <DependentUpon>AddReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddReport.resx">
+      <DependentUpon>AddReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
