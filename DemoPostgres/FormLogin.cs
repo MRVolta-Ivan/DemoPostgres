@@ -25,8 +25,7 @@ namespace DemoPostgres
 
             try
             {
-                DBConnection.instance.Init("Raf", "123");
-                //DBConnection.instance.Init(LoginBox.Text, PasswordBox.Text);
+                DBConnection.instance.Init(LoginBox.Text, PasswordBox.Text);
 
                 FormMain main = new FormMain(this);
                 main.Show();
