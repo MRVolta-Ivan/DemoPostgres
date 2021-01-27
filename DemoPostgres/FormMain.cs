@@ -515,5 +515,11 @@ namespace DemoPostgres
             AddOrder form = new AddOrder();
             form.Show();
         }
+
+        private void AddApplicationChangeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddApplicationChange addApplicationChange = new AddApplicationChange();
+            addApplicationChange.Show();
+        }
     }
 }

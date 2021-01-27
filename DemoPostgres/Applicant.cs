@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace DemoPostgres
 {
-
     class ApplicantRepository
     {
         DBConnection connection = DBConnection.instance;
@@ -37,7 +36,6 @@ namespace DemoPostgres
 
         public List<Applicant> GetListTenant()
         {
-
             List<List<string>> data = connection.ExecuteSQL("select * from getlistapplicanttenant()");
 
             return Mapper(data);
