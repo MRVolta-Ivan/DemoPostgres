@@ -64,7 +64,7 @@ namespace DemoPostgres
 
         private void MapperApplicant(List<Applicant> data)
         {
-            dataGrid.ContextMenuStrip = null;
+            dataGrid.ContextMenuStrip = contextApplicantMenuGridData;
 
             dataGrid.Rows.Clear();
 
@@ -452,7 +452,7 @@ namespace DemoPostgres
 
         private void MapperRoom(List<Room> data)
         {
-            dataGrid.ContextMenuStrip = null;
+            dataGrid.ContextMenuStrip = contextRoomMenuGridData;
 
             dataGrid.Rows.Clear();
 
@@ -538,6 +538,58 @@ namespace DemoPostgres
         private void AddReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddReport form = new AddReport();
+            form.Show();
+        }
+
+        private void ChangeDormitoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Dormitory dorm = null;
+
+            List<Dormitory> listDorm = dormitory.GetListDormitory();
+
+            foreach (Dormitory i in  listDorm)
+                if (i.id == Convert.ToInt64(dataGrid.SelectedCells[0].Value))
+                {
+                    dorm = i;
+                    break;
+                }
+
+            ChangeDormitory form = new ChangeDormitory(dorm);
+            form.Show();
+        }
+
+        private void ChangeApplicantToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Applicant appl = null;
+
+            List<Applicant> listAppl = applicant.GetListApplicant();
+
+
+            foreach (Applicant i in listAppl)
+                if (i.id == Convert.ToInt64(dataGrid.SelectedCells[0].Value))
+                {
+                    appl = i;
+                    break;
+                }
+
+            ChangeApplicant form = new ChangeApplicant(appl);
+            form.Show();
+        }
+
+        private void ChangeRoomToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Room r = null;
+
+            List<Room> listRoom = room.GetAll();
+
+            foreach (Room i in listRoom)
+                if (i.id == Convert.ToInt64(dataGrid.SelectedCells[0].Value))
+                {
+                    r = i;
+                    break;
+                }
+
+            ChangeRoom form = new ChangeRoom(r);
             form.Show();
         }
     }

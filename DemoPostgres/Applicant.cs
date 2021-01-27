@@ -68,9 +68,14 @@ namespace DemoPostgres
 
             return index;
         }
+
+        public void Change(string fio, string number, string adress, long idapplicant)
+        {
+            connection.ExecuteSQL("call changeapplicant('"+fio+"', '"+number+"', '"+adress+"', "+idapplicant+")");
+        }
     }
 
-    class Applicant
+    public class Applicant
     {
         public long id;
         public string fio;
