@@ -78,7 +78,7 @@ namespace DemoPostgres
 
             foreach (Applicant i in data)
             {
-                dataGrid.Rows.Add(i.id, i.fio, i.nuberTelephone, i.adress);
+                dataGrid.Rows.Add(i.id, i.fio, i.numberTelephone, i.adress);
             }
         }
 
@@ -514,6 +514,13 @@ namespace DemoPostgres
         {
             AddOrder form = new AddOrder();
             form.Show();
+        }
+
+
+        private void AddApplicationChangeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddApplicationChange addApplicationChange = new AddApplicationChange();
+            addApplicationChange.Show();
         }
 
         private void AddPermissionToolStripMenuItem_Click(object sender, EventArgs e)
