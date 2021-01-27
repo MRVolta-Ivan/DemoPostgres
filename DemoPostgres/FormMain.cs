@@ -21,7 +21,7 @@ namespace DemoPostgres
         DormitoryRepository dormitory = new DormitoryRepository();
         RoomRepository room = new RoomRepository();
         EmployeeRepository employee = new EmployeeRepository();
-        Inspectorrepository inspector = new Inspectorrepository();
+        InspectorRepository inspector = new InspectorRepository();
 
         ApplicationRepository application = new ApplicationRepository();
         PermissionRepository permission = new PermissionRepository();
@@ -525,6 +525,12 @@ namespace DemoPostgres
         private void AddReceiptToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddReceipt form = new AddReceipt();
+            form.Show();
+        }
+
+        private void AddReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddReport form = new AddReport();
             form.Show();
         }
     }

@@ -254,6 +254,7 @@
             this.AddReportToolStripMenuItem.Name = "AddReportToolStripMenuItem";
             this.AddReportToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
             this.AddReportToolStripMenuItem.Text = "Добавить отчёт о проверке";
+            this.AddReportToolStripMenuItem.Click += new System.EventHandler(this.AddReportToolStripMenuItem_Click);
             // 
             // dataGrid
             // 
