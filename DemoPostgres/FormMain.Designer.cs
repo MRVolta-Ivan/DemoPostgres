@@ -63,6 +63,7 @@
             this.ChangeApplicantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextRoomMenuGridData = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ChangeRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddApplicationChangeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.contextDormitoryMenuGridData.SuspendLayout();
@@ -212,6 +213,7 @@
             // 
             this.AddToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AddApplicationSetToolStripMenuItem,
+            this.AddApplicationChangeToolStripMenuItem,
             this.AddDormitoryToolStripMenuItem,
             this.AddOrderToolStripMenuItem,
             this.AddPermissionToolStripMenuItem,
@@ -224,42 +226,44 @@
             // AddApplicationSetToolStripMenuItem
             // 
             this.AddApplicationSetToolStripMenuItem.Name = "AddApplicationSetToolStripMenuItem";
-            this.AddApplicationSetToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.AddApplicationSetToolStripMenuItem.Size = new System.Drawing.Size(340, 22);
             this.AddApplicationSetToolStripMenuItem.Text = "Добавить заявление на заселение";
             this.AddApplicationSetToolStripMenuItem.Click += new System.EventHandler(this.AddApplicationSetToolStripMenuItem_Click);
             // 
             // AddDormitoryToolStripMenuItem
             // 
             this.AddDormitoryToolStripMenuItem.Name = "AddDormitoryToolStripMenuItem";
-            this.AddDormitoryToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.AddDormitoryToolStripMenuItem.Size = new System.Drawing.Size(340, 22);
             this.AddDormitoryToolStripMenuItem.Text = "Добавить общежитие";
             this.AddDormitoryToolStripMenuItem.Click += new System.EventHandler(this.AddDormitoryToolStripMenuItem_Click);
             // 
             // AddOrderToolStripMenuItem
             // 
             this.AddOrderToolStripMenuItem.Name = "AddOrderToolStripMenuItem";
-            this.AddOrderToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.AddOrderToolStripMenuItem.Size = new System.Drawing.Size(340, 22);
             this.AddOrderToolStripMenuItem.Text = "Добавить приказ";
             this.AddOrderToolStripMenuItem.Click += new System.EventHandler(this.AddOrderToolStripMenuItem_Click);
             // 
             // AddPermissionToolStripMenuItem
             // 
             this.AddPermissionToolStripMenuItem.Name = "AddPermissionToolStripMenuItem";
+
             this.AddPermissionToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
             this.AddPermissionToolStripMenuItem.Text = "Добавить разрешение";
             this.AddPermissionToolStripMenuItem.Click += new System.EventHandler(this.AddPermissionToolStripMenuItem_Click);
+
             // 
             // AddReceiptToolStripMenuItem
             // 
             this.AddReceiptToolStripMenuItem.Name = "AddReceiptToolStripMenuItem";
-            this.AddReceiptToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.AddReceiptToolStripMenuItem.Size = new System.Drawing.Size(340, 22);
             this.AddReceiptToolStripMenuItem.Text = "Добавить квитанцию";
             this.AddReceiptToolStripMenuItem.Click += new System.EventHandler(this.AddReceiptToolStripMenuItem_Click);
             // 
             // AddReportToolStripMenuItem
             // 
             this.AddReportToolStripMenuItem.Name = "AddReportToolStripMenuItem";
-            this.AddReportToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.AddReportToolStripMenuItem.Size = new System.Drawing.Size(340, 22);
             this.AddReportToolStripMenuItem.Text = "Добавить отчёт о проверке";
             this.AddReportToolStripMenuItem.Click += new System.EventHandler(this.AddReportToolStripMenuItem_Click);
             // 
@@ -344,6 +348,13 @@
             this.ChangeRoomToolStripMenuItem.Text = "Изменить";
             this.ChangeRoomToolStripMenuItem.Click += new System.EventHandler(this.ChangeRoomToolStripMenuItem_Click);
             // 
+            // AddApplicationChangeToolStripMenuItem
+            // 
+            this.AddApplicationChangeToolStripMenuItem.Name = "AddApplicationChangeToolStripMenuItem";
+            this.AddApplicationChangeToolStripMenuItem.Size = new System.Drawing.Size(340, 22);
+            this.AddApplicationChangeToolStripMenuItem.Text = "Добавить заявление на переселение/выселение";
+            this.AddApplicationChangeToolStripMenuItem.Click += new System.EventHandler(this.AddApplicationChangeToolStripMenuItem_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -404,5 +415,6 @@
         private System.Windows.Forms.ToolStripMenuItem ChangeApplicantToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextRoomMenuGridData;
         private System.Windows.Forms.ToolStripMenuItem ChangeRoomToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AddApplicationChangeToolStripMenuItem;
     }
 }

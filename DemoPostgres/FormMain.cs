@@ -516,6 +516,13 @@ namespace DemoPostgres
             form.Show();
         }
 
+
+        private void AddApplicationChangeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddApplicationChange addApplicationChange = new AddApplicationChange();
+            addApplicationChange.Show();
+        }
+
         private void AddPermissionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddPermission form = new AddPermission();
