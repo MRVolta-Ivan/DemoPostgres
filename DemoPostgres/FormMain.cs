@@ -406,7 +406,7 @@ namespace DemoPostgres
             }
         }
 
-        private void reportToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
             dataGrid.ContextMenuStrip = null;
 
@@ -513,6 +513,12 @@ namespace DemoPostgres
         private void AddOrderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddOrder form = new AddOrder();
+            form.Show();
+        }
+
+        private void AddPermissionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddPermission form = new AddPermission();
             form.Show();
         }
     }

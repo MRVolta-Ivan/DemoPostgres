@@ -31,6 +31,20 @@ namespace DemoPostgres
 
             return result;
         }
+
+        public long Add(string number, string date, long idemployee, long idroom, long iddormitory, long idapplicant)
+        {
+            connection.ExecuteSQL("call addpermission('"+number+"', '"+date+"', "+idemployee+", "+idroom+", "+iddormitory+", "+idapplicant+")");
+
+            List<Permission> data = GetAll();
+
+            long index = data[0].id;
+            for (int i = 1; i < data.Count; i++)
+                if (index < data[i].id)
+                    index = data[i].id;
+
+            return index;
+        }
     }
 
     class Permission
