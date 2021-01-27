@@ -45,11 +45,12 @@
             this.PermissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ReceiptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.AddApplicationSetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddDormitoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddPermissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddReceiptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGrid = new System.Windows.Forms.DataGridView();
@@ -57,7 +58,6 @@
             this.RoomDormitoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ShowAllRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ShowFreeRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.AddPermissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.contextDormitoryMenuGridData.SuspendLayout();
@@ -88,7 +88,7 @@
             // ExitToolStripMenuItem
             // 
             this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
-            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.ExitToolStripMenuItem.Text = "Выход";
             this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -161,7 +161,7 @@
             this.PermissionToolStripMenuItem,
             this.OrderToolStripMenuItem,
             this.ReceiptToolStripMenuItem,
-            this.reportToolStripMenuItem});
+            this.ReportToolStripMenuItem});
             this.DocsToolStripMenuItem.Name = "DocsToolStripMenuItem";
             this.DocsToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
             this.DocsToolStripMenuItem.Text = "Документы";
@@ -194,12 +194,12 @@
             this.ReceiptToolStripMenuItem.Text = "Квитанции";
             this.ReceiptToolStripMenuItem.Click += new System.EventHandler(this.ReceiptToolStripMenuItem_Click);
             // 
-            // reportToolStripMenuItem
+            // ReportToolStripMenuItem
             // 
-            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-            this.reportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.reportToolStripMenuItem.Text = "Отчёты о проверке";
-            this.reportToolStripMenuItem.Click += new System.EventHandler(this.reportToolStripMenuItem_Click);
+            this.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem";
+            this.ReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ReportToolStripMenuItem.Text = "Отчёты о проверке";
+            this.ReportToolStripMenuItem.Click += new System.EventHandler(this.ReportToolStripMenuItem_Click);
             // 
             // AddToolStripMenuItem1
             // 
@@ -235,17 +235,26 @@
             this.AddOrderToolStripMenuItem.Text = "Добавить приказ";
             this.AddOrderToolStripMenuItem.Click += new System.EventHandler(this.AddOrderToolStripMenuItem_Click);
             // 
+            // AddPermissionToolStripMenuItem
+            // 
+            this.AddPermissionToolStripMenuItem.Name = "AddPermissionToolStripMenuItem";
+            this.AddPermissionToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.AddPermissionToolStripMenuItem.Text = "Добавить разрешение";
+            this.AddPermissionToolStripMenuItem.Click += new System.EventHandler(this.AddPermissionToolStripMenuItem_Click);
+            // 
             // AddReceiptToolStripMenuItem
             // 
             this.AddReceiptToolStripMenuItem.Name = "AddReceiptToolStripMenuItem";
             this.AddReceiptToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
             this.AddReceiptToolStripMenuItem.Text = "Добавить квитанцию";
+            this.AddReceiptToolStripMenuItem.Click += new System.EventHandler(this.AddReceiptToolStripMenuItem_Click);
             // 
             // AddReportToolStripMenuItem
             // 
             this.AddReportToolStripMenuItem.Name = "AddReportToolStripMenuItem";
             this.AddReportToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
             this.AddReportToolStripMenuItem.Text = "Добавить отчёт о проверке";
+            this.AddReportToolStripMenuItem.Click += new System.EventHandler(this.AddReportToolStripMenuItem_Click);
             // 
             // dataGrid
             // 
@@ -292,12 +301,6 @@
             this.ShowFreeRoomToolStripMenuItem.Text = "Показать свободные комнаты";
             this.ShowFreeRoomToolStripMenuItem.Click += new System.EventHandler(this.ShowFreeRoomToolStripMenuItem_Click);
             // 
-            // AddPermissionToolStripMenuItem
-            // 
-            this.AddPermissionToolStripMenuItem.Name = "AddPermissionToolStripMenuItem";
-            this.AddPermissionToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
-            this.AddPermissionToolStripMenuItem.Text = "Добавить разрешение";
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,7 +342,7 @@
         private System.Windows.Forms.ToolStripMenuItem OrderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ReceiptToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGrid;
-        private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ReportToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextDormitoryMenuGridData;
         private System.Windows.Forms.ToolStripMenuItem RoomDormitoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddToolStripMenuItem1;

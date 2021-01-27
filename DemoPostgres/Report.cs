@@ -32,6 +32,20 @@ namespace DemoPostgres
 
             return result;
         }
+
+        public long Add(string number, string date, string fire, string system, string general, long idinspector, long iddormitory)
+        {
+            connection.ExecuteSQL("call addreport_about_inspection('"+number+"', '"+date+"', '"+fire+"', '"+system+"', '"+general+"', "+idinspector+", "+iddormitory+")");
+
+            List<Report> data = GetAll();
+
+            long index = data[0].id;
+            for (int i = 1; i < data.Count; i++)
+                if (index < data[i].id)
+                    index = data[i].id;
+
+            return index;
+        }
     }
 
     class Report

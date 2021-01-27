@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DemoPostgres
 {
-    class Inspectorrepository
+    class InspectorRepository
     {
         DBConnection connection = DBConnection.instance;
 
