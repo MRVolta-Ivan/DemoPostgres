@@ -60,9 +60,14 @@ namespace DemoPostgres
 
             return index;
         }
+
+        public void Change(string number, double cost, long idroom)
+        {
+            connection.ExecuteSQL("call changeroom('"+number+"', "+ cost.ToString().Replace(',', '.') + ", "+idroom+")");
+        }
     }
 
-    class Room
+    public class Room
     {
         public long id;
         public string number;

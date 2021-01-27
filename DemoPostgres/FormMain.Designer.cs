@@ -59,9 +59,15 @@
             this.ShowAllRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ShowFreeRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ChangeDormitoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextApplicantMenuGridData = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ChangeApplicantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextRoomMenuGridData = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ChangeRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.contextDormitoryMenuGridData.SuspendLayout();
+            this.contextApplicantMenuGridData.SuspendLayout();
+            this.contextRoomMenuGridData.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu
@@ -278,7 +284,7 @@
             this.RoomDormitoryToolStripMenuItem,
             this.ChangeDormitoryToolStripMenuItem});
             this.contextDormitoryMenuGridData.Name = "contextMenuGridData";
-            this.contextDormitoryMenuGridData.Size = new System.Drawing.Size(181, 70);
+            this.contextDormitoryMenuGridData.Size = new System.Drawing.Size(142, 48);
             // 
             // RoomDormitoryToolStripMenuItem
             // 
@@ -286,7 +292,7 @@
             this.ShowAllRoomToolStripMenuItem,
             this.ShowFreeRoomToolStripMenuItem});
             this.RoomDormitoryToolStripMenuItem.Name = "RoomDormitoryToolStripMenuItem";
-            this.RoomDormitoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.RoomDormitoryToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.RoomDormitoryToolStripMenuItem.Text = "Обжещития";
             // 
             // ShowAllRoomToolStripMenuItem
@@ -306,9 +312,37 @@
             // ChangeDormitoryToolStripMenuItem
             // 
             this.ChangeDormitoryToolStripMenuItem.Name = "ChangeDormitoryToolStripMenuItem";
-            this.ChangeDormitoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ChangeDormitoryToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.ChangeDormitoryToolStripMenuItem.Text = "Изменить";
             this.ChangeDormitoryToolStripMenuItem.Click += new System.EventHandler(this.ChangeDormitoryToolStripMenuItem_Click);
+            // 
+            // contextApplicantMenuGridData
+            // 
+            this.contextApplicantMenuGridData.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ChangeApplicantToolStripMenuItem});
+            this.contextApplicantMenuGridData.Name = "contextApplicantMenuGridData";
+            this.contextApplicantMenuGridData.Size = new System.Drawing.Size(129, 26);
+            // 
+            // ChangeApplicantToolStripMenuItem
+            // 
+            this.ChangeApplicantToolStripMenuItem.Name = "ChangeApplicantToolStripMenuItem";
+            this.ChangeApplicantToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.ChangeApplicantToolStripMenuItem.Text = "Изменить";
+            this.ChangeApplicantToolStripMenuItem.Click += new System.EventHandler(this.ChangeApplicantToolStripMenuItem_Click);
+            // 
+            // contextRoomMenuGridData
+            // 
+            this.contextRoomMenuGridData.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ChangeRoomToolStripMenuItem});
+            this.contextRoomMenuGridData.Name = "contextRoomMenuGridData";
+            this.contextRoomMenuGridData.Size = new System.Drawing.Size(181, 48);
+            // 
+            // ChangeRoomToolStripMenuItem
+            // 
+            this.ChangeRoomToolStripMenuItem.Name = "ChangeRoomToolStripMenuItem";
+            this.ChangeRoomToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ChangeRoomToolStripMenuItem.Text = "Изменить";
+            this.ChangeRoomToolStripMenuItem.Click += new System.EventHandler(this.ChangeRoomToolStripMenuItem_Click);
             // 
             // FormMain
             // 
@@ -327,6 +361,8 @@
             this.menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             this.contextDormitoryMenuGridData.ResumeLayout(false);
+            this.contextApplicantMenuGridData.ResumeLayout(false);
+            this.contextRoomMenuGridData.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,5 +400,9 @@
         private System.Windows.Forms.ToolStripMenuItem ShowFreeRoomToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddPermissionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ChangeDormitoryToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextApplicantMenuGridData;
+        private System.Windows.Forms.ToolStripMenuItem ChangeApplicantToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextRoomMenuGridData;
+        private System.Windows.Forms.ToolStripMenuItem ChangeRoomToolStripMenuItem;
     }
 }

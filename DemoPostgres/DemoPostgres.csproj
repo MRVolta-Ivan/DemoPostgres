@@ -118,11 +118,23 @@
     </Compile>
     <Compile Include="Applicant.cs" />
     <Compile Include="Application.cs" />
+    <Compile Include="ChangeApplicant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeApplicant.Designer.cs">
+      <DependentUpon>ChangeApplicant.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChangeDormitory.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChangeDormitory.Designer.cs">
       <DependentUpon>ChangeDormitory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeRoom.Designer.cs">
+      <DependentUpon>ChangeRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee.cs" />
     <Compile Include="DBConnection.cs" />
@@ -167,8 +179,14 @@
     <EmbeddedResource Include="AddReport.resx">
       <DependentUpon>AddReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChangeApplicant.resx">
+      <DependentUpon>ChangeApplicant.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChangeDormitory.resx">
       <DependentUpon>ChangeDormitory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeRoom.resx">
+      <DependentUpon>ChangeRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

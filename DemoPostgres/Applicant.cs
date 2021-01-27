@@ -70,20 +70,25 @@ namespace DemoPostgres
 
             return index;
         }
+
+        public void Change(string fio, string number, string adress, long idapplicant)
+        {
+            connection.ExecuteSQL("call changeapplicant('"+fio+"', '"+number+"', '"+adress+"', "+idapplicant+")");
+        }
     }
 
-    class Applicant
+    public class Applicant
     {
         public long id;
         public string fio;
-        public string nuberTelephone;
+        public string numberTelephone;
         public string adress;
 
         public Applicant(long id, string fio, string nuberTelephone, string adress)
         {
             this.id = id;
             this.fio = fio;
-            this.nuberTelephone = nuberTelephone;
+            this.numberTelephone = nuberTelephone;
             this.adress = adress;
         }
     }

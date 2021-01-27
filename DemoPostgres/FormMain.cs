@@ -64,7 +64,7 @@ namespace DemoPostgres
 
         private void MapperApplicant(List<Applicant> data)
         {
-            dataGrid.ContextMenuStrip = null;
+            dataGrid.ContextMenuStrip = contextApplicantMenuGridData;
 
             dataGrid.Rows.Clear();
 
@@ -78,7 +78,7 @@ namespace DemoPostgres
 
             foreach (Applicant i in data)
             {
-                dataGrid.Rows.Add(i.id, i.fio, i.nuberTelephone, i.adress);
+                dataGrid.Rows.Add(i.id, i.fio, i.numberTelephone, i.adress);
             }
         }
 
@@ -452,7 +452,7 @@ namespace DemoPostgres
 
         private void MapperRoom(List<Room> data)
         {
-            dataGrid.ContextMenuStrip = null;
+            dataGrid.ContextMenuStrip = contextRoomMenuGridData;
 
             dataGrid.Rows.Clear();
 
@@ -548,6 +548,41 @@ namespace DemoPostgres
                 }
 
             ChangeDormitory form = new ChangeDormitory(dorm);
+            form.Show();
+        }
+
+        private void ChangeApplicantToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Applicant appl = null;
+
+            List<Applicant> listAppl = applicant.GetListApplicant();
+
+
+            foreach (Applicant i in listAppl)
+                if (i.id == Convert.ToInt64(dataGrid.SelectedCells[0].Value))
+                {
+                    appl = i;
+                    break;
+                }
+
+            ChangeApplicant form = new ChangeApplicant(appl);
+            form.Show();
+        }
+
+        private void ChangeRoomToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Room r = null;
+
+            List<Room> listRoom = room.GetAll();
+
+            foreach (Room i in listRoom)
+                if (i.id == Convert.ToInt64(dataGrid.SelectedCells[0].Value))
+                {
+                    r = i;
+                    break;
+                }
+
+            ChangeRoom form = new ChangeRoom(r);
             form.Show();
         }
     }
